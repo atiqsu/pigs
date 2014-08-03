@@ -12,7 +12,7 @@ P.I.G.S supports JPG's, JPEG's, PNG's and GIF's, it even supports transparent PN
 ## Requirements
 **Minimum**
 - PHP 5.3.0
-- You get the entire script + JSON support as an output.
+- You get the entire script.
 
 **Recommended**
 - PHP 5.5.0
@@ -72,7 +72,7 @@ echo $pigs->dir("path/to/images/") // Path to images to process
 		  ->render("gallery"); // Render
 ```
 
-_**Note**: If you use the custom url pattern then you will not be able to have two galleries per page using pagination._
+_**Note**: If you use the custom url pattern then you will not be able to have two+ galleries per page using pagination._
 
 For render options you have
 * **array** (Leave blank) Returns array of data
