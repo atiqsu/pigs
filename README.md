@@ -27,9 +27,9 @@ Support File Types
 -----
 * JPEG
 * GIF
-..* Transparent GIF
+··* Transparent GIF
 * PNG
-..* Transparent PNG
+··* Transparent PNG
 
 ## Install
 Include Pigs class.
