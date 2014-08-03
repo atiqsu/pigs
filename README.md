@@ -28,7 +28,7 @@ Support File Types
     * Transparent PNG
 
 ## Demo
-http://www.firedartstudios.com/labs/pigs
+http://www.firedartstudios.com/demos/pigs/4.0.0/
 
 ## Download & Quick Install
 When you download this git the only thing you need to do for a working demo is to drop some images inside of the /images/ folder in the root.
