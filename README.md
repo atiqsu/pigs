@@ -1,5 +1,5 @@
 # pigs
-_4.0.0.rc4_
+_**4.0.0.rc4** - Currently testing bugs for final release._
 
 -----
 
@@ -11,14 +11,10 @@ P.I.G.S supports JPG's, JPEG's, PNG's and GIF's, it even supports transparent PN
 
 ## Requirements
 **Minimum**
-- PHP 5.0.0
-- You get the entire script but you won't have JSON support as an output.
-
-**Recommended**
-- PHP 5.2.0
+- PHP 5.3.0
 - You get the entire script + JSON support as an output.
 
-**Optimal**
+**Recommended**
 - PHP 5.5.0
 - Imagemagick
 - You get the entire script + the full power of PHP 5.5.0 and the image processing speed of Imagemagick.
@@ -31,13 +27,36 @@ Support File Types
 * PNG
     * Transparent PNG
 
-## Install
+## Demo
+http://www.firedartstudios.com/labs/pigs
+
+## Down & Quick Install
+When you download this git the only thing you need to do for a working demo is to drop some images inside of the /images/ folder in the root.
+
+## Install & Options
 Include Pigs class.
 ```
 include('path/to/pigs/dir/pigs.php');
 ```
 
 Call the Pigs class and string on arguments
+### Basic
+```
+var_dump(
+	$pigs->dir("path/to/images/")
+		 ->render()
+);
+```
+
+### Gallery
+```
+echo $pigs->dir("path/to/images/")
+		  ->size(1024)
+		  ->thumb(150)
+		  ->render("gallery");
+```
+
+### All Options
 ```
 $pigs = new pigs();
 echo $pigs->dir("path/to/images/") // Path to images to process
@@ -46,6 +65,9 @@ echo $pigs->dir("path/to/images/") // Path to images to process
 		  ->originals(true) // Keep original images
 		  ->pagination(true) // Enable Pagination
 		  ->limit(9) // Amount of images per page
+		  ->pattern("%gallery%/%page%") // Create custom url example.tld/gallery/demo/10
+		  ->base("example.tld/gallery/") // Base for custom url
+		  ->current(<get dynamic maybe?>) // Current page number for custom url
 		  ->cache(true) // Cache the gallery for faster rendering
 		  ->render("gallery"); // Render
 ```
