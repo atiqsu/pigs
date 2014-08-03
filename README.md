@@ -30,7 +30,7 @@ Support File Types
 ## Demo
 http://www.firedartstudios.com/labs/pigs
 
-## Down & Quick Install
+## Download & Quick Install
 When you download this git the only thing you need to do for a working demo is to drop some images inside of the /images/ folder in the root.
 
 ## Install & Options
@@ -71,6 +71,8 @@ echo $pigs->dir("path/to/images/") // Path to images to process
 		  ->cache(true) // Cache the gallery for faster rendering
 		  ->render("gallery"); // Render
 ```
+
+_**Note**: If you use the custom url pattern then you will not be able to have two galleries per page using pagination._
 
 For render options you have
 * **array** (Leave blank) Returns array of data
